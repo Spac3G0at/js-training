@@ -11,6 +11,15 @@
 
 // Your code :
 
+function abs(num){
+	if (num < 0) {
+		let result = num - num * 2;
+		return result;
+	}else{
+		return num;
+	}
+}
+
 //* Begin of tests
 const assert = require('assert')
 

@@ -10,6 +10,16 @@
 
 // Your code :
 
+function multiply(x, y){
+	let cpt = 0;
+	let total = 0;
+	while(cpt != x){
+		total += y;
+		cpt++;
+	}
+	return total;
+}
+
 //* Begin of tests
 const assert = require('assert')
 
