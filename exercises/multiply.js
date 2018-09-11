@@ -11,14 +11,32 @@
 // Your code :
 
 function multiply(x, y){
-	let cpt = 0;
-	let total = 0;
-	while(cpt != x){
-		total += y;
-		cpt++;
-	}
-	return total;
-}
+            let cpt = 0;
+            let total = 0;
+
+            if (x > 0 && y > 0) {
+                while(cpt != x){
+                    total += y;
+                    cpt++;
+                }
+            }
+            else if(x == 0 || y == 0){
+            	total = 0;
+            }
+            else{
+            	if (x < 0) {
+            		x = Math.abs(x);
+            	}else{
+            		y = Math.abs(y);
+            	}
+                while(cpt != x){
+                    total += y;
+                    cpt++;
+                }
+                total = -total;
+            }
+            return total;
+        }
 
 //* Begin of tests
 const assert = require('assert')
@@ -34,5 +52,5 @@ assert.strictEqual(multiply(0, -230), 0)
 assert.strictEqual(multiply(0, 0), 0)
 assert.strictEqual(multiply(123, -22), -2706)
 assert.strictEqual(multiply(-22, 123), -2706)
-assert.strictEqual(multiply(-22, -123), 2706)
+assert.strictEqual(multiply(-22, -123), 2706);
 // End of tests */
