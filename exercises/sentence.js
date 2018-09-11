@@ -7,6 +7,13 @@
  */
 
 
+ function sentence(arr){
+ 	let sentence = arr.join(" ");
+ 	return sentence;
+ }
+ 
+
+
 //* Begin of tests
 const assert = require('assert')
 

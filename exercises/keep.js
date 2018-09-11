@@ -12,9 +12,29 @@
  *
  */
 
+ function keepFirst(str){
+ 	let res = str.slice(0, 2);
+ 	return res;
+ }
+
+ function keepLast(str){
+ 	let len = str.length;
+ 	let res = str.slice(len-2, len);
+ 	return res;
+ }
+
+ function keepFirstLast(str){
+ 	let len = str.length;
+ 	let part1 = str.slice(3, 5);
+ 	return part1;
+ }
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+// assert.fail('You must write your own tests')
+assert.deepStrictEqual(keepFirst("Hello World"), 'He')
+assert.deepStrictEqual(keepLast("Hello World"), 'ld')
+assert.deepStrictEqual(keepFirstLast("Hello World"), 'lo')
 // End of tests */

@@ -7,9 +7,16 @@
  *
  */
 
+ function whisper(str){
+ 	return "*"+str.toLowerCase()+"*";
+ }
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+// assert.fail('You must write your own tests')
+assert.deepStrictEqual(whisper("AbC"), '*abc*')
+assert.deepStrictEqual(whisper("Hello World"), '*hello world*')
+
 // End of tests */

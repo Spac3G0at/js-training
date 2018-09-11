@@ -9,6 +9,16 @@
 
 // Your code :
 
+function getLast(str){
+	if (typeof str === "string") {
+		let len = str.length;
+		return str.charAt(len-1);
+	}else{
+		let len = str.length;
+		return str[len-1];
+	}
+}
+
 //* Begin of tests
 const assert = require('assert')
 

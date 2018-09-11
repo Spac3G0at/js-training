@@ -9,7 +9,13 @@
 
 // Your code :
 
-
+function getFirst(str){
+	if (typeof str == 'string') {
+		return str.charAt(0);
+	}else{
+		return str[0];
+	}
+}
 
 //* Begin of tests
 const assert = require('assert')
