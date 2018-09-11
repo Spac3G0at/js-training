@@ -11,32 +11,32 @@
 // Your code :
 
 function multiply(x, y){
-            let cpt = 0;
-            let total = 0;
+	let cpt = 0;
+	let total = 0;
 
-            if (x > 0 && y > 0) {
-                while(cpt != x){
-                    total += y;
-                    cpt++;
-                }
-            }
-            else if(x == 0 || y == 0){
-            	total = 0;
-            }
-            else{
-            	if (x < 0) {
-            		x = Math.abs(x);
-            	}else{
-            		y = Math.abs(y);
-            	}
-                while(cpt != x){
-                    total += y;
-                    cpt++;
-                }
-                total = -total;
-            }
-            return total;
-        }
+	if (x > 0 && y > 0) {
+		while(cpt != x){
+			total += y;
+			cpt++;
+		}
+	}
+	else if(x == 0 || y == 0){
+		total = 0;
+	}
+	else{
+		if (x < 0) {
+			x = Math.abs(x);
+		}else{
+			y = Math.abs(y);
+		}
+		while(cpt != x){
+			total += y;
+			cpt++;
+		}
+		total = -total;
+	}
+	return total;
+}
 
 //* Begin of tests
 const assert = require('assert')
